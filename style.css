@@ -1,0 +1,960 @@
+/*==============================
+ GOOGLE FONTS
+==============================*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/*==============================
+ RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#060611;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+}
+
+/*==============================
+ SCROLL BAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#050510;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00ffe7;
+
+    border-radius:20px;
+
+}
+
+/*==============================
+ PARTICLE BACKGROUND
+==============================*/
+
+#particles{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(255,0,255,.15),transparent 30%),
+    radial-gradient(circle at 50% 80%,rgba(0,153,255,.18),transparent 35%),
+    #050510;
+
+    z-index:-10;
+
+}
+
+/*==============================
+ NAVBAR
+==============================*/
+
+nav{
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 10%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(0,0,0,.3);
+
+    border-bottom:1px solid rgba(0,255,255,.2);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:32px;
+
+    font-family:'Orbitron',sans-serif;
+
+    color:#00ffe7;
+
+    letter-spacing:4px;
+
+    text-shadow:
+
+    0 0 8px cyan,
+
+    0 0 20px cyan,
+
+    0 0 35px cyan;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.4s;
+
+    font-weight:500;
+
+}
+
+nav ul li a:hover{
+
+    color:#00ffe7;
+
+    text-shadow:
+
+    0 0 10px cyan,
+
+    0 0 20px cyan;
+
+}
+
+/*==============================
+ HERO
+==============================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:120px 10%;
+
+}
+
+.hero-left{
+
+    width:55%;
+
+}
+
+.hero-left h3{
+
+    font-size:22px;
+
+    color:#00ffe7;
+
+}
+
+.hero-left h1{
+
+    font-size:70px;
+
+    margin:20px 0;
+
+    font-family:'Orbitron';
+
+    color:white;
+
+}
+
+.hero-left h2{
+
+    font-size:32px;
+
+    color:#8c52ff;
+
+    margin-bottom:20px;
+
+}
+
+.hero-left p{
+
+    color:#d8d8d8;
+
+    line-height:32px;
+
+    font-size:18px;
+
+}
+
+/*==============================
+ BUTTONS
+==============================*/
+
+.buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.btn{
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid cyan;
+
+    transition:.4s;
+
+    box-shadow:0 0 20px cyan;
+
+}
+
+.btn:hover{
+
+    background:cyan;
+
+    color:black;
+
+    transform:translateY(-5px);
+
+}
+
+.btn2{
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid #8c52ff;
+
+    transition:.4s;
+
+    box-shadow:0 0 20px #8c52ff;
+
+}
+
+.btn2:hover{
+
+    background:#8c52ff;
+
+    transform:translateY(-5px);
+
+}
+
+/*==============================
+ PROFILE IMAGE
+==============================*/
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.circle{
+
+    width:380px;
+
+    height:380px;
+
+    border-radius:50%;
+
+    padding:8px;
+
+    background:linear-gradient(45deg,#00ffe7,#8c52ff);
+
+    animation:rotateBorder 10s linear infinite;
+
+    box-shadow:
+
+    0 0 40px cyan,
+
+    0 0 60px #8c52ff;
+
+}
+
+.circle img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+/*==============================
+ ANIMATION
+==============================*/
+
+@keyframes rotateBorder{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==============================
+ SECTION TITLE
+==============================*/
+
+section{
+
+    padding:100px 10%;
+
+}
+
+.title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    font-family:'Orbitron';
+
+    margin-bottom:60px;
+
+    color:#00ffe7;
+
+    text-shadow:
+
+    0 0 15px cyan;
+
+}
+
+/*==============================
+ GLASS CARD
+==============================*/
+
+.glass{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    backdrop-filter:blur(15px);
+
+    transition:.5s;
+
+}
+
+.glass:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 0 25px cyan;
+
+}
+/*==============================
+ SKILLS SECTION
+==============================*/
+
+.skill-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+
+    gap:30px;
+
+}
+
+
+.card{
+
+    height:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+
+    145deg,
+
+    rgba(0,255,255,.15),
+
+    rgba(140,82,255,.15)
+
+    );
+
+    border:1px solid rgba(0,255,255,.3);
+
+    border-radius:20px;
+
+    font-family:'Orbitron';
+
+    font-size:20px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+
+    height:200%;
+
+    background:
+
+    conic-gradient(
+
+    transparent,
+
+    cyan,
+
+    transparent 30%
+
+    );
+
+    animation:spin 5s linear infinite;
+
+}
+
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:3px;
+
+    background:#080817;
+
+    border-radius:18px;
+
+}
+
+
+.card{
+
+    isolation:isolate;
+
+}
+
+
+.card{
+
+    z-index:1;
+
+}
+
+
+.card:hover{
+
+    transform:
+
+    translateY(-15px)
+
+    scale(1.05);
+
+    box-shadow:
+
+    0 0 25px cyan,
+
+    0 0 50px #8c52ff;
+
+}
+
+
+.card{
+
+    text-shadow:
+
+    0 0 10px cyan;
+
+}
+
+
+/* keep text above animation */
+
+.card{
+
+    color:white;
+
+}
+
+
+.card::after{
+
+    z-index:-1;
+
+}
+
+
+/*==============================
+ PROJECTS
+==============================*/
+
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+
+.project{
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    border:
+
+    1px solid rgba(0,255,255,.3);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    transition:.5s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.project h2{
+
+    color:#00ffe7;
+
+    font-family:'Orbitron';
+
+    margin-bottom:20px;
+
+}
+
+
+.project p{
+
+    color:#ddd;
+
+    line-height:28px;
+
+}
+
+
+.project:hover{
+
+    transform:
+
+    perspective(800px)
+
+    rotateX(8deg)
+
+    translateY(-15px);
+
+    box-shadow:
+
+    0 0 30px cyan;
+
+}
+
+
+.project::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50%;
+
+    left:-50%;
+
+    width:200%;
+
+    height:200%;
+
+    background:
+
+    linear-gradient(
+
+    transparent,
+
+    rgba(0,255,255,.15),
+
+    transparent
+
+    );
+
+    transform:rotate(45deg);
+
+    animation:shine 4s infinite;
+
+}
+
+
+/*==============================
+ EDUCATION TIMELINE
+==============================*/
+
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+.timeline .glass{
+
+    border-left:
+
+    5px solid cyan;
+
+}
+
+
+.timeline h2{
+
+    color:#8c52ff;
+
+    font-family:'Orbitron';
+
+    margin-bottom:15px;
+
+}
+
+
+.timeline span{
+
+    color:#00ffe7;
+
+}
+
+
+
+/*==============================
+ CONTACT
+==============================*/
+
+
+.contact{
+
+    text-align:center;
+
+    max-width:600px;
+
+    margin:auto;
+
+}
+
+
+.contact h2{
+
+    font-family:'Orbitron';
+
+    color:#00ffe7;
+
+    font-size:35px;
+
+    margin-bottom:25px;
+
+}
+
+
+.contact p{
+
+    font-size:18px;
+
+    margin:15px;
+
+    color:#ddd;
+
+}
+
+
+
+/*==============================
+ FOOTER
+==============================*/
+
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    background:#03030b;
+
+    border-top:
+
+    1px solid rgba(0,255,255,.2);
+
+    color:#aaa;
+
+}
+
+
+
+/*==============================
+ ANIMATIONS
+==============================*/
+
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes shine{
+
+    0%{
+
+        transform:
+
+        translateX(-100%)
+
+        rotate(45deg);
+
+    }
+
+
+    100%{
+
+        transform:
+
+        translateX(100%)
+
+        rotate(45deg);
+
+    }
+
+}
+
+
+/*==============================
+ RESPONSIVE DESIGN
+==============================*/
+
+
+@media(max-width:900px){
+
+
+    nav{
+
+        padding:0 5%;
+
+    }
+
+
+    nav ul{
+
+        display:none;
+
+    }
+
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding-top:150px;
+
+    }
+
+
+    .hero-left{
+
+        width:100%;
+
+    }
+
+
+    .hero-left h1{
+
+        font-size:45px;
+
+    }
+
+
+    .hero-left h2{
+
+        font-size:25px;
+
+    }
+
+
+    .hero-right{
+
+        margin-top:50px;
+
+    }
+
+
+    .circle{
+
+        width:280px;
+
+        height:280px;
+
+    }
+
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .title{
+
+        font-size:30px;
+
+    }
+
+
+    section{
+
+        padding:70px 5%;
+
+    }
+
+
+    .hero-left h1{
+
+        font-size:35px;
+
+    }
+
+
+    .btn,
+    .btn2{
+
+        padding:12px 20px;
+
+    }
+
+}
